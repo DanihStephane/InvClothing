@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none 
+    disabled:opacity-50 h-10 px-4 py-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700 dark:bg-secondary-700 dark:hover:bg-secondary-600;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-500 text-white hover:bg-accent-600 dark:bg-accent-600 dark:hover:bg-accent-500;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-transparent hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800;
+  }
+  
+  .card {
+    @apply rounded-lg border border-gray-200 bg-white p-5 shadow-card transition-all 
+    hover:shadow-card-hover dark:border-gray-800 dark:bg-gray-800;
+  }
+  
+  .input {
+    @apply h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm 
+    placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 
+    disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-900;
+  }
+  
+  .badge {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors;
+  }
+  
+  .badge-primary {
+    @apply border-transparent bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300;
+  }
+  
+  .badge-secondary {
+    @apply border-transparent bg-secondary-100 text-secondary-800 dark:bg-secondary-900 dark:text-secondary-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.dark {
+  --scrollbar-thumb: #4b5563;
+  --scrollbar-track: #1f2937;
+}
+
+:root {
+  --scrollbar-thumb: #d1d5db;
+  --scrollbar-track: #f3f4f6;
+}
