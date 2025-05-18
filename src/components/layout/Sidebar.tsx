@@ -17,7 +17,8 @@ import {
   Store,
   Settings,
   ChevronRight,
-  LogOut
+  LogOut,
+  Map // Ajout de l'icône Map
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { Avatar } from '../ui/Avatar';
@@ -123,6 +124,13 @@ export const Sidebar = ({
       path: '/stores',
       icon: <Store size={20} />,
       minimized: 'Magasins'
+    },
+    // Nouveau menu pour la localisation des appareils
+    {
+      title: 'Localiser Appareils',
+      path: '/device-tracking',
+      icon: <Map size={20} />,
+      minimized: 'Localiser'
     },
     {
       title: 'Paramètres',

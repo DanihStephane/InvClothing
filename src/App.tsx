@@ -21,6 +21,8 @@ import ImagesPage from './pages/Images';
 import StatisticsPage from './pages/Statistics';
 import MovementsPage from './pages/Movements';
 import SalesPage from './pages/Sales';
+import Stores from './pages/Stores';
+import DeviceTracking from './pages/DeviceTracking';
 
 // Initialize theme
 initTheme();
@@ -209,6 +211,14 @@ function App() {
                 element={
                   <PageTransition>
                     <UserActivity />
+                  </PageTransition>
+                } 
+              />
+              <Route 
+                path="device-tracking" 
+                element={
+                  <PageTransition>
+                    <DeviceTracking />
                   </PageTransition>
                 } 
               />
